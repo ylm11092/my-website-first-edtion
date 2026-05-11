@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NRRB5VCKEK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NRRB5VCKEK');
+
+  // 追蹤TG Bot按鈕點擊
+  document.addEventListener('DOMContentLoaded', function() {
+    var tgButtons = document.querySelectorAll('a[href*="t.me"], a[href*="telegram"]');
+    tgButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        gtag('event', 'click_telegram_bot', {
+          'event_category': 'CTA',
+          'event_label': 'Telegram Bot Click'
+        });
+      });
+    });
+  });
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>天眼AI｜百家樂智能預測系統</title>
